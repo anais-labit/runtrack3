@@ -1,0 +1,31 @@
+.section {
+  display: flex;
+}
+
+#section1,
+#section2,
+#section3,
+#section4 {
+  background-color: #88c1d0;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+}
+
+@media all and (max-width: 1600px) {
+  .section {
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1599px) {
+  .section {
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .section {
+    flex-direction: column;
+  }
+}
