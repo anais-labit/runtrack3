@@ -87,7 +87,7 @@
     </section>
     <footer>
         <div class="flex justify-center">
-            <p>&copy;<a href="https://anais-labit.students-laplateforme.io/index.html">ANAIS LABIT avec TAILWIND</a> <span class="year">• 2023 • <a href="https://github.com/anais-labit/livre-or">Github du projet <i class="fab fa-github-alt"></i></a></span></p>
+            <p>&copy;<a href="https://anais-labit.students-laplateforme.io/index.html">ANAIS LABIT avec TAILWIND</a> <span class="year">• 2023 • <a href="https://github.com/anais-labit/runtrack3/tree/main/jour08">Github du projet <i class="fab fa-github-alt"></i></a></span></p>
         </div>
     </footer>
 </body>
