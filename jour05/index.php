@@ -1,37 +1,62 @@
+<?php
+require_once './includes/functions.php';
+session_start();
+
+// ajout à la DB pour inscription
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2']) && isset($_POST['firstname'])) {
+    register();
+    die();
+}
+
+
+// comparaison pour connexion
+if ((isset($_POST['email'])) && (isset($_POST['password']))) {
+    signIn($_POST['email'], $_POST['password']);
+    die();
+}
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8" />
-    <title>formulaire</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
+    <title>Accueil</title>
+
 </head>
 
 <body>
     <div class=" container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="#" method="post" id="createForm">
                 <h1>Inscrivez-vous</h1>
-                <div class="social-container">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <input type="text" placeholder="Nom">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Mot de passe">
-                <input type="password2" placeholder="Confirmation de Mot de passe">
-                <button>Créer un compte</button>
+                <input type="text" id="name" name="name" placeholder="Nom" required>
+                <input type="text" id="firstname" name="firstname" placeholder="Prenom" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <span class="error"></span>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <input type="password" id="password2" name="password2" placeholder="Confirmation de Mot de passe" required>
+                <span class="error" id="error"></span>
+                <button type="submit" id="create">Créer un compte</button>
+                <span id="creation"></span>
             </form>
         </div>
         <div class="form-container login-container">
-            <form action="#">
+            <form action="#" method="post" id="logForm">
                 <h1>Bienvenue</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Mot de passe">
-                <button>Se connecter</button>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+                <span class="error" id="error"></span>
+                <button type="submit" id="connect">Se connecter</button>
+                <span id="connexion"></span>
             </form>
         </div>
 
