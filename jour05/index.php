@@ -8,16 +8,11 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     die();
 }
 
-
 // comparaison pour connexion
 if ((isset($_POST['email'])) && (isset($_POST['password']))) {
     signIn($_POST['email'], $_POST['password']);
     die();
 }
-
-
-
-
 
 ?>
 

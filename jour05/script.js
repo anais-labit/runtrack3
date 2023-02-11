@@ -105,6 +105,6 @@ function showError() {
     emailError.textContent = "Merci de saisir une adresse mail valide";
   } else {
     iError.textContent = "Tous les champs sont requis";
-    cError.textContent = "Tous les champs sont requis";
+    cError.textContent = "Ce compte n'existe pas";
   }
 }

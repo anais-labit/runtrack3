@@ -65,7 +65,3 @@ function signIn($email, $password)
         }
     }
 }
-
-// function displayErrors(){
-
-// }
