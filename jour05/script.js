@@ -36,6 +36,7 @@ create.addEventListener("click", async (event) => {
         const creation = document.getElementById("creation");
         creation.innerHTML = json["message"];
         creation.style.color = "#FAC9B8";
+        iError.textContent = "";
       }
     });
 });
@@ -57,6 +58,7 @@ connect.addEventListener("click", async (event) => {
         const connexion = document.getElementById("connexion");
         connexion.innerHTML = json["Cmessage"];
         connexion.style.color = "#FAC9B8";
+        cError.textContent = "";
       }
     });
 });
@@ -85,7 +87,10 @@ create.addEventListener("click", async (event) => {
   if (!email.validity.valid) {
     // If it isn't, we display an appropriate error message
     showError();
+    event.preventDefault();
+  } else {
     // Then we prevent the form from being sent by canceling the event
+    iError.textContent = "Tous les champs sont requis";
     event.preventDefault();
   }
 });
